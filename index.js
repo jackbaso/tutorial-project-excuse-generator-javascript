@@ -11,5 +11,18 @@ function arregloRandom(arreglo){
     return arreglo[random]
 }
 
-let excuse = `${arregloRandom(who)} ${arregloRandom(action)} ${arregloRandom(what)} ${arregloRandom(when)}`
+function generarExcusa (){
+    return `${arregloRandom(who)} ${arregloRandom(action)} ${arregloRandom(what)} ${arregloRandom(when)}` // esto es igual que "xxx" + "xxx "
+} 
+
 console.log(excuse)
+
+
+
+window.onload = function(){ // primero me carga toda la pagina y luego funciona esto
+    let excusa = document.querySelector("#excuse")
+    excusa.innerHTML = generarExcusa()
+    document.getElementById('boton').addEventListener("click", function(){
+        excusa.innerHTML = `<h2>${generarExcusa()}</h2>`
+    })
+}
