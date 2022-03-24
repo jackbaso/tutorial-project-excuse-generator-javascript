@@ -23,6 +23,6 @@ window.onload = function(){ // primero me carga toda la pagina y luego funciona 
     let excusa = document.querySelector("#excuse")
     excusa.innerHTML = generarExcusa()
     document.getElementById('boton').addEventListener("click", function(){
-        excusa.innerHTML = `<h2>${generarExcusa()}</h2>`
+        excusa.innerHTML = `<h3>${generarExcusa()}</h3>`
     })
 }
